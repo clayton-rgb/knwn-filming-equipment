@@ -197,6 +197,28 @@ a:hover { text-decoration: underline; }
   transform: translateY(-1px);
 }
 
+.hero-video {
+  max-width: 720px;
+  margin: 34px auto 4px;
+}
+.hero-video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 14px 44px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.hero-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ── Page wrapper ────────────────────────────────────────── */
 .page {
   max-width: 1100px;
@@ -807,6 +829,11 @@ a:hover { text-decoration: underline; }
   <p class="hero-eyebrow">KNWN Local · Real Estate Content &amp; Branding</p>
   <h1 class="hero-title">Video Equipment &amp; Filming <em>Guide</em></h1>
   <p class="hero-sub">Everything you need to know about filming amazing YouTube videos.</p>
+  <div class="hero-video">
+    <div class="hero-video-frame">
+      <iframe src="https://www.loom.com/embed/1b4ddde589fe44f5aaa7dac28d845497" title="KNWN Local — Video Equipment &amp; Filming walkthrough" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+    </div>
+  </div>
   <a href="#kit" class="hero-cta">
     See the full kit
     <span aria-hidden="true">↓</span>
