@@ -223,7 +223,7 @@ a:hover { text-decoration: underline; }
 .hero-arrow {
   position: absolute;
   top: -128px;
-  right: -46px;
+  right: clamp(-150px, calc(150px - 22vw), -24px);
   width: 168px;
   color: var(--lav);
   pointer-events: none;
