@@ -199,7 +199,8 @@ a:hover { text-decoration: underline; }
 
 .hero-video {
   max-width: 720px;
-  margin: 34px auto 40px;
+  margin: 60px auto 40px;
+  position: relative;
 }
 .hero-video-frame {
   position: relative;
@@ -220,26 +221,28 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-arrow {
-  position: relative;
-  width: 116px;
-  margin: 4px auto -18px;
+  position: absolute;
+  top: -150px;
+  right: -8px;
+  width: 244px;
   color: var(--lav);
-  transform: rotate(-4deg);
-  z-index: 2;
+  pointer-events: none;
+  z-index: 3;
 }
-.hero-arrow svg { width: 74px; height: auto; display: block; margin: 0 auto; }
+.hero-arrow svg { width: 100%; height: auto; display: block; overflow: visible; }
 .hero-arrow-label {
   position: absolute;
-  top: 6px;
-  left: -46px;
+  top: -14px;
+  left: 0;
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 24px;
   color: var(--lav);
-  transform: rotate(-10deg);
+  transform: rotate(-7deg);
   white-space: nowrap;
 }
+@media (max-width: 720px) { .hero-arrow { display: none; } }
 
 /* ── Page wrapper ────────────────────────────────────────── */
 .page {
@@ -895,16 +898,16 @@ a:hover { text-decoration: underline; }
   <p class="hero-eyebrow">KNWN Local · Real Estate Content &amp; Branding</p>
   <h1 class="hero-title">Video Equipment &amp; Filming <em>Guide</em></h1>
   <p class="hero-sub">Everything you need to know about filming amazing YouTube videos.</p>
-  <div class="hero-arrow" aria-hidden="true">
-    <svg viewBox="0 0 130 104" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M72 6 C 52 18, 92 26, 66 42 C 44 56, 86 60, 62 80" />
-      <path d="M62 80 L 49 71 M62 80 L 76 74" />
-    </svg>
-    <span class="hero-arrow-label">watch this first</span>
-  </div>
   <div class="hero-video">
     <div class="hero-video-frame">
       <iframe src="https://www.loom.com/embed/1b4ddde589fe44f5aaa7dac28d845497" title="KNWN Local — Video Equipment &amp; Filming walkthrough" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+    </div>
+    <div class="hero-arrow" aria-hidden="true">
+      <span class="hero-arrow-label">watch this first!</span>
+      <svg viewBox="0 0 250 210" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" overflow="visible">
+        <path d="M64 40 C 150 4, 244 42, 232 112 C 224 162, 158 166, 100 182" />
+        <path d="M100 182 L 124 183 M100 182 L 114 159" />
+      </svg>
     </div>
   </div>
   <a href="#kit" class="hero-cta">
