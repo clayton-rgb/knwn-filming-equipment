@@ -277,47 +277,46 @@ a:hover { text-decoration: underline; }
   max-width: 560px;
 }
 
-/* Studio Setup Inspiration */
-.studio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 14px;
-  margin-top: 28px;
-}
-.studio-shot {
-  margin: 0;
-  border-radius: 10px;
+/* Studio setup inspiration — horizontal auto-scrolling marquee */
+.studio-marquee {
+  margin: 44px calc(-1 * clamp(16px, 5vw, 64px)) 0;
+  padding: 14px 0;
   overflow: hidden;
-  border: 1px solid var(--border);
-  background: #000;
-  box-shadow: 0 2px 14px rgba(102,79,159,0.10);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
 }
-.studio-shot img {
-  width: 100%;
+.studio-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: studio-marquee-scroll 60s linear infinite;
+}
+.studio-marquee:hover .studio-marquee-track { animation-play-state: paused; }
+.studio-marquee-card {
+  flex: 0 0 auto;
+  width: clamp(190px, 21vw, 290px);
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
+  border-radius: 12px;
+  border: 1px solid rgba(185, 144, 221, 0.28);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  margin-right: 16px;
 }
-.studio-shot:hover img { transform: scale(1.04); }
-.studio-cta-wrap { text-align: center; margin-top: 34px; }
-.studio-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  background: var(--deep);
-  color: var(--white);
+@keyframes studio-marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-marquee-track { animation: none; }
+}
+.studio-marquee-cap {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 13px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.15s, transform 0.12s;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin: 16px 0 30px;
 }
-.studio-cta:hover { background: var(--purple); text-decoration: none; transform: translateY(-1px); }
-.studio-cta .pin-ico { width: 17px; height: 17px; fill: currentColor; }
+.studio-marquee-cap a { color: var(--lav); font-weight: 600; text-decoration: none; }
+.studio-marquee-cap a:hover { text-decoration: underline; }
 
 /* ── Kit Grid ────────────────────────────────────────────── */
 .kit-grid {
@@ -897,6 +896,36 @@ a:hover { text-decoration: underline; }
       </svg>
     </div>
   </div>
+
+  <!-- Studio setup inspiration — auto-scrolling marquee under the video -->
+  <div class="studio-marquee" id="studio" aria-label="Studio and podcast setup inspiration">
+    <div class="studio-marquee-track">
+      <img class="studio-marquee-card" src="studio/studio-1.jpg" alt="Home studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-2.jpg" alt="Home studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-3.jpg" alt="Podcast studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-4.jpg" alt="Podcast studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-5.jpg" alt="Home studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-6.jpg" alt="Talking-head studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-7.jpg" alt="Home studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-8.jpg" alt="Living-room studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-9.jpg" alt="Podcast studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-10.jpg" alt="Talking-head studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-11.jpg" alt="Podcast studio setup" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-1.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-2.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-3.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-4.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-5.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-6.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-7.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-8.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-9.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-10.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="studio-marquee-card" src="studio/studio-11.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+  </div>
+  <p class="studio-marquee-cap">Real talking-head &amp; podcast setups &mdash; <a href="https://www.pinterest.com/search/pins/?q=home%20podcast%20studio%20setup" target="_blank" rel="noopener">browse hundreds more on Pinterest &#8599;</a></p>
+
   <a href="#kit" class="hero-cta">
     See the full kit
     <span aria-hidden="true">↓</span>
@@ -1495,34 +1524,7 @@ a:hover { text-decoration: underline; }
 
   </section>
 
-  <!-- ═══════════════════════════════════ SECTION 3: STUDIO SETUP -->
-  <section class="section" id="studio" aria-labelledby="studio-heading">
-    <div class="section-eyebrow">Section 03</div>
-    <h2 class="section-title" id="studio-heading">Studio Setup Inspiration</h2>
-    <p class="section-intro">Real talking-head &amp; podcast setups to spark ideas for your own space &mdash; then browse hundreds more on Pinterest.</p>
-
-    <div class="studio-grid">
-      <figure class="studio-shot"><img src="studio/studio-1.jpg" alt="Home studio setup example 1" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-2.jpg" alt="Home studio setup example 2" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-3.jpg" alt="Podcast studio setup example 3" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-4.jpg" alt="Podcast studio setup example 4" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-5.jpg" alt="Home studio setup example 5" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-6.jpg" alt="Talking-head studio setup example 6" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-7.jpg" alt="Home studio setup example 7" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-8.jpg" alt="Living-room studio setup example 8" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-9.jpg" alt="Podcast studio setup example 9" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-10.jpg" alt="Talking-head studio setup example 10" loading="lazy"></figure>
-      <figure class="studio-shot"><img src="studio/studio-11.jpg" alt="Podcast studio setup example 11" loading="lazy"></figure>
-    </div>
-
-    <div class="studio-cta-wrap">
-      <a class="studio-cta" href="https://www.pinterest.com/search/pins/?q=home%20podcast%20studio%20setup" target="_blank" rel="noopener">
-        <svg class="pin-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345c-.091.378-.293 1.194-.333 1.361-.052.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12C24 5.372 18.627 0 12 0z"/></svg>
-        Get inspired on Pinterest
-        <span aria-hidden="true">&#8599;</span>
-      </a>
-    </div>
-  </section>
+  <!-- ═══════════════════════════════════ Studio inspiration now lives as a marquee in the hero -->
 
 </main>
 
