@@ -460,247 +460,7 @@ a:hover { text-decoration: underline; }
   align-self: center;
 }
 
-/* ── Budget Tiers: desktop table ─────────────────────────── */
-.tier-section-intro {
-  margin-top: 10px;
-}
-
-/* Desktop table */
-.tier-table-wrap {
-  overflow-x: auto;
-  margin-top: 32px;
-  border-radius: 10px;
-  border: 1.5px solid var(--border);
-}
-
-.tier-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-  min-width: 640px;
-}
-
-.tier-table thead tr {
-  background: var(--deep);
-}
-
-.tier-table thead th {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  padding: 14px 18px;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.tier-table thead th.th-cat {
-  width: 16%;
-  text-align: left;
-  border-radius: 10px 0 0 0;
-}
-
-.tier-table thead th.th-better {
-  background: var(--purple);
-  color: var(--white);
-  position: relative;
-}
-
-.tier-table thead th.th-better::after {
-  content: '★ Recommended';
-  display: block;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.65);
-  font-weight: 500;
-  margin-top: 2px;
-}
-
-.tier-table thead th:last-child {
-  border-radius: 0 10px 0 0;
-}
-
-.tier-table tbody tr {
-  border-bottom: 1px solid var(--border);
-}
-
-.tier-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.tier-table tbody tr:nth-child(even) {
-  background: rgba(11,1,25,0.02);
-}
-
-.tier-table tbody tr:nth-child(odd) td.td-better {
-  background: var(--lav-bg);
-}
-
-.tier-table tbody tr:nth-child(even) td.td-better {
-  background: var(--lav-bg-dark);
-}
-
-.tier-table td {
-  padding: 14px 18px;
-  vertical-align: top;
-  font-family: 'Inter', sans-serif;
-  color: var(--ink);
-  line-height: 1.45;
-}
-
-.tier-table td.td-cat {
-  font-weight: 600;
-  font-size: 12px;
-  color: var(--deep);
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
-.tier-table td.td-better {
-  font-weight: 600;
-  color: var(--deep);
-}
-
-.tier-table td .tier-product {
-  color: var(--ink);
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: var(--purple);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-.tier-table td .tier-product:hover {
-  color: var(--purple);
-  text-decoration: underline;
-}
-
-.tier-table td.td-better .tier-product {
-  color: var(--deep);
-}
-
-.tier-price {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  color: var(--muted);
-  margin-top: 3px;
-}
-
-.tier-table td.td-better .tier-price {
-  color: var(--purple);
-}
-
-/* ── Budget Tiers: mobile cards ──────────────────────────── */
-.tier-cards {
-  display: none;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 32px;
-}
-
-.tier-cat-block {
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.tier-cat-heading {
-  background: var(--deep);
-  padding: 10px 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-}
-
-.tier-options {
-  display: flex;
-  flex-direction: column;
-}
-
-.tier-option {
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.tier-option:last-child {
-  border-bottom: none;
-}
-
-.tier-option.is-better {
-  background: var(--lav-bg);
-}
-
-.tier-option-badge {
-  flex-shrink: 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 3px 7px;
-  border-radius: 4px;
-  margin-top: 2px;
-  white-space: nowrap;
-}
-
-.tier-option-badge.badge-budget {
-  background: rgba(102,79,159,0.1);
-  color: var(--purple);
-}
-
-.tier-option-badge.badge-better {
-  background: var(--purple);
-  color: var(--white);
-}
-
-.tier-option-badge.badge-best {
-  background: var(--deep);
-  color: rgba(255,255,255,0.8);
-}
-
-.tier-option-body {
-  flex: 1;
-}
-
-.tier-option-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.tier-option.is-better .tier-option-name {
-  color: var(--deep);
-}
-
-.tier-option-price {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
-.tier-option.is-better .tier-option-price {
-  color: var(--purple);
-}
-
-/* Switch to mobile at 720px */
-@media (max-width: 720px) {
-  .tier-table-wrap { display: none; }
-  .tier-cards { display: flex; }
-}
+.kit-total-alt[hidden] { display: none; }
 
 /* ── Footer ──────────────────────────────────────────────── */
 .footer {
@@ -875,7 +635,7 @@ a:hover { text-decoration: underline; }
   <span class="nav-site">knwnlocal.com</span>
   <ul class="nav-links">
     <li><a href="#kit">The Kit</a></li>
-    <li><a href="#tiers">By Budget</a></li>
+    <li><a href="#upgraded">Upgraded Kit</a></li>
     <li><a href="#studio">Setup Ideas</a></li>
   </ul>
 </nav>
@@ -946,7 +706,7 @@ a:hover { text-decoration: underline; }
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-camera"/></svg>Camera</div>
         <div class="kit-card-name">Sony FX30</div>
-        <div class="kit-card-price">$2,100 <span class="price-used">· used ~$1,600</span></div>
+        <div class="kit-card-price" data-price="2100" data-alt-price="1600">$2,100 <span class="price-used">· used ~$1,600</span></div>
         <a class="kit-card-btn" href="https://www.amazon.com/dp/B0BGQGBW8J?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
@@ -955,7 +715,7 @@ a:hover { text-decoration: underline; }
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-lens"/></svg>Lens</div>
         <div class="kit-card-name">Sigma 18-50mm f/2.8 DC DN Contemporary</div>
-        <div class="kit-card-price">$550</div>
+        <div class="kit-card-price" data-price="550">$550</div>
         <a class="kit-card-btn" href="https://www.amazon.com/dp/B09JVBB36L?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
@@ -964,7 +724,7 @@ a:hover { text-decoration: underline; }
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-audio"/></svg>Audio</div>
         <div class="kit-card-name">DJI Mic 2</div>
-        <div class="kit-card-price">$200</div>
+        <div class="kit-card-price" data-price="200">$200</div>
         <a class="kit-card-btn" href="https://www.amazon.com/dp/B0CFZX734J?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
@@ -972,9 +732,9 @@ a:hover { text-decoration: underline; }
 
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-teleprompter"/></svg>Teleprompter</div>
-        <div class="kit-card-name">NEEWER X14</div>
-        <div class="kit-card-price">$200</div>
-        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0BC968J1M?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+        <div class="kit-card-name">NEEWER X11</div>
+        <div class="kit-card-price" data-price="240">$240</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0GQTG1GGQ?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
       </article>
@@ -982,7 +742,7 @@ a:hover { text-decoration: underline; }
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tripod"/></svg>Tripod</div>
         <div class="kit-card-name">Manfrotto Befree Live</div>
-        <div class="kit-card-price">$200</div>
+        <div class="kit-card-price" data-price="200">$200</div>
         <a class="kit-card-btn" href="https://www.amazon.com/dp/B07HQWGQTF?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
@@ -990,27 +750,27 @@ a:hover { text-decoration: underline; }
 
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-lighting"/></svg>Lighting</div>
-        <div class="kit-card-name">Amaran 200d S</div>
-        <div class="kit-card-price">$240</div>
-        <a class="kit-card-btn" href="https://www.amazon.com/dp/B08RNW1HL6?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
-          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-      </article>
-
-      <article class="kit-card" role="listitem">
-        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-softbox"/></svg>Softbox</div>
-        <div class="kit-card-name">Aputure Light Dome</div>
-        <div class="kit-card-price">$180</div>
-        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0GFD9CVN7?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+        <div class="kit-card-name">GVM 200W LED with Softbox &amp; Stand</div>
+        <div class="kit-card-price" data-price="290">$290</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0C89CK595?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
       </article>
 
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-memory-card"/></svg>Memory Card</div>
-        <div class="kit-card-name">SanDisk Extreme Pro V60 128GB</div>
-        <div class="kit-card-price">$160</div>
-        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0BXH2WY9Q?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+        <div class="kit-card-name">SanDisk Extreme Pro V60 256GB</div>
+        <div class="kit-card-price" data-price="220">$220</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0BXH1V287?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-memory-card"/></svg>Card Reader</div>
+        <div class="kit-card-name">Acer USB-C &amp; USB-A SD Card Reader</div>
+        <div class="kit-card-price" data-price="10">$10</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0DQ71G4G4?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
       </article>
@@ -1018,7 +778,7 @@ a:hover { text-decoration: underline; }
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-batteries"/></svg>Batteries</div>
         <div class="kit-card-name">Sony NP-FZ100 OEM &times;3</div>
-        <div class="kit-card-price">$250</div>
+        <div class="kit-card-price" data-price="250">$250</div>
         <a class="kit-card-btn" href="https://www.amazon.com/dp/B071CLKMRT?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
@@ -1027,456 +787,131 @@ a:hover { text-decoration: underline; }
       <article class="kit-card" role="listitem">
         <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-charger"/></svg>Charger</div>
         <div class="kit-card-name">Sony BC-ZD1 Dual Charger</div>
-        <div class="kit-card-price">$150</div>
+        <div class="kit-card-price" data-price="150">$150</div>
         <a class="kit-card-btn" href="https://www.amazon.com/dp/B0DM3DDDVM?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
-          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-      </article>
-
-      <article class="kit-card" role="listitem">
-        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-nd-filter"/></svg>ND Filter</div>
-        <div class="kit-card-name">K&amp;F Concept True Color VND ND2-32 + CPL (55mm)</div>
-        <div class="kit-card-price">$80</div>
-        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0CTH6G3QZ?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
           Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
         </a>
       </article>
 
     </div><!-- /kit-grid -->
 
-    <div class="kit-total" aria-label="Estimated total investment">
+    <div class="kit-total" data-kit-total="kit" aria-live="polite" aria-label="Estimated total investment">
       <span class="kit-total-label">Estimated total investment</span>
       <div>
-        <span class="kit-total-amount">~$4,300</span>
-        <span class="kit-total-alt">· or ~$3,800 with a used FX30</span>
+        <span class="kit-total-amount"></span>
+        <span class="kit-total-alt"></span>
       </div>
     </div>
 
   </section>
 
-  <!-- ══════════════════════ SECTION 2: BUDGET TIERS -->
-  <section class="section" id="tiers" aria-labelledby="tiers-heading">
+  <!-- ══════════════════════ SECTION 2: UPGRADED KIT -->
+  <section class="section" id="upgraded" aria-labelledby="upgraded-heading">
     <div class="section-eyebrow">Section 02</div>
-    <h2 class="section-title" id="tiers-heading">Choose by Budget</h2>
-    <p class="section-intro tier-section-intro">Prices are approximate and shift over time. <strong>Better</strong> is our recommended tier.</p>
+    <h2 class="section-title" id="upgraded-heading">The Upgraded Kit</h2>
+    <p class="section-intro">The highest-end version of the same setup. Same categories, top-of-the-line picks.</p>
 
-    <!-- Desktop table (hidden ≤720px) -->
-    <div class="tier-table-wrap" role="region" aria-label="Budget tier comparison table">
-      <table class="tier-table">
-        <thead>
-          <tr>
-            <th class="th-cat" scope="col">Category</th>
-            <th scope="col">Budget</th>
-            <th class="th-better" scope="col">Better</th>
-            <th scope="col">Best</th>
-          </tr>
-        </thead>
-        <tbody>
+    <div class="kit-grid" role="list">
 
-          <tr>
-            <td class="td-cat">Camera</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Sony+ZV-E1&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony ZV-E1</a>
-              <span class="tier-price">$1,500–$2,000</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B0BGQGBW8J?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony FX30</a>
-              <span class="tier-price">$1,800–$2,000</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/dp/B08WJKKD47?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony FX3</a>
-              <span class="tier-price">$3,500–$4,000</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-camera"/></svg>Camera</div>
+        <div class="kit-card-name">Sony FX3</div>
+        <div class="kit-card-price" data-price="3900">$3,900</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B08WJKKD47?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Lens</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Tamron+28-75mm+f2.8+G2&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Tamron 28-75mm f/2.8 G2</a>
-              <span class="tier-price">$800–$1,000</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B09JVBB36L?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sigma 18-50mm f/2.8 DC DN Contemporary</a>
-              <span class="tier-price">$500–$600</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Sony+24-70mm+f2.8+GM+II&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony 24-70mm f/2.8 GM II</a>
-              <span class="tier-price">$2,100–$2,400</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-lens"/></svg>Lens</div>
+        <div class="kit-card-name">Sony 24-70mm f/2.8 GM II</div>
+        <div class="kit-card-price" data-price="2400">$2,400</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/s?k=Sony+24-70mm+f2.8+GM+II&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Microphone</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=DJI+Mic+Mini&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">DJI Mic Mini</a>
-              <span class="tier-price">$150–$180</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B0CFZX734J?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">DJI Mic 2</a>
-              <span class="tier-price">$300–$350</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=RODE+Wireless+PRO&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">RODE Wireless PRO</a>
-              <span class="tier-price">$350–$450</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-audio"/></svg>Audio</div>
+        <div class="kit-card-name">RODE Wireless PRO</div>
+        <div class="kit-card-price" data-price="400">$400</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/s?k=RODE+Wireless+PRO&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Teleprompter</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Desview+T3&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Desview T3</a>
-              <span class="tier-price">$80–$130</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B0BC968J1M?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">NEEWER X14</a>
-              <span class="tier-price">$180–$250</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/dp/B0CH3P9K1X?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Elgato Prompter</a>
-              <span class="tier-price">$280–$320</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-teleprompter"/></svg>Teleprompter</div>
+        <div class="kit-card-name">Elgato Prompter</div>
+        <div class="kit-card-price" data-price="300">$300</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0CH3P9K1X?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Tripod <span style="font-weight:400;color:var(--muted)">(fluid head)</span></td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=SmallRig+AD-01+Kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">SmallRig AD-01 Kit</a>
-              <span class="tier-price">$150–$250</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B07HQWGQTF?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Manfrotto Befree Live</a>
-              <span class="tier-price">$250–$450</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Benro+Aero+Series+Kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Benro Aero Series Kit</a>
-              <span class="tier-price">$500–$900</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tripod"/></svg>Tripod</div>
+        <div class="kit-card-name">Benro Aero Series Kit</div>
+        <div class="kit-card-price" data-price="700">$700</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/s?k=Benro+Aero+Series+Kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Lighting</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Amaran+100d+S&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Amaran 100d S</a>
-              <span class="tier-price">$200–$300</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B08RNW1HL6?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Amaran 200d S</a>
-              <span class="tier-price">$350–$500</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Aputure+300d+II&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Aputure 300d II</a>
-              <span class="tier-price">$900–$1,300</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-lighting"/></svg>Lighting</div>
+        <div class="kit-card-name">Aputure 300d II</div>
+        <div class="kit-card-price" data-price="1100">$1,100</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B07V2F7DSN?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Memory Card</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=SanDisk+Extreme+Pro+V30+128GB&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">SanDisk Extreme Pro V30 128GB</a>
-              <span class="tier-price">$25–$40</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B0BXH2WY9Q?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">SanDisk Extreme Pro V60 128GB</a>
-              <span class="tier-price">$50–$90</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Sony+Tough+V60+128GB&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony Tough V60 128GB</a>
-              <span class="tier-price">$100–$180</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-memory-card"/></svg>Memory Card</div>
+        <div class="kit-card-name">Sony Tough V60 128GB</div>
+        <div class="kit-card-price" data-price="180">$180</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/s?k=Sony+Tough+V60+128GB&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">Batteries</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=Sony+NP-FZ100+third+party+battery+kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Third-party kit</a>
-              <span class="tier-price">$50–$100</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B071CLKMRT?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony OEM</a> + <a class="tier-product" href="https://www.amazon.com/dp/B0DM3DDDVM?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">dual charger</a>
-              <span class="tier-price">$150–$250</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/dp/B071CLKMRT?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony OEM &times;3</a> + <a class="tier-product" href="https://www.amazon.com/dp/B0DM3DDDVM?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">dual charger</a>
-              <span class="tier-price">$300–$450</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-memory-card"/></svg>Card Reader</div>
+        <div class="kit-card-name">Acer USB-C &amp; USB-A SD Card Reader</div>
+        <div class="kit-card-price" data-price="10">$10</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0DQ71G4G4?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-          <tr>
-            <td class="td-cat">ND Filter</td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=K%26F+Concept+Variable+ND&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">K&amp;F Concept VND</a>
-              <span class="tier-price">$40–$80</span>
-            </td>
-            <td class="td-better">
-              <a class="tier-product" href="https://www.amazon.com/dp/B0CTH6G3QZ?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">K&amp;F Concept True Color VND + CPL (55mm)</a>
-              <span class="tier-price">$70–$90</span>
-            </td>
-            <td>
-              <a class="tier-product" href="https://www.amazon.com/s?k=PolarPro+Peter+McKinnon+VND&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">PolarPro Peter McKinnon VND</a>
-              <span class="tier-price">$180–$300</span>
-            </td>
-          </tr>
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-batteries"/></svg>Batteries</div>
+        <div class="kit-card-name">Sony NP-FZ100 OEM &times;3</div>
+        <div class="kit-card-price" data-price="250">$250</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B071CLKMRT?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-        </tbody>
-      </table>
-    </div><!-- /tier-table-wrap -->
+      <article class="kit-card" role="listitem">
+        <div class="kit-card-category"><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-charger"/></svg>Charger</div>
+        <div class="kit-card-name">Sony BC-ZD1 Dual Charger</div>
+        <div class="kit-card-price" data-price="150">$150</div>
+        <a class="kit-card-btn" href="https://www.amazon.com/dp/B0DM3DDDVM?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">
+          Buy on Amazon <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
-    <!-- Mobile stacked cards (shown ≤720px) -->
-    <div class="tier-cards" aria-label="Budget tier comparison by category">
+    </div><!-- /kit-grid -->
 
-      <!-- Camera -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Camera</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Sony+ZV-E1&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony ZV-E1</a></div>
-              <div class="tier-option-price">$1,500–$2,000</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B0BGQGBW8J?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony FX30</a></div>
-              <div class="tier-option-price">$1,800–$2,000</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B08WJKKD47?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony FX3</a></div>
-              <div class="tier-option-price">$3,500–$4,000</div>
-            </div>
-          </div>
-        </div>
+    <div class="kit-total" data-kit-total="upgraded" aria-live="polite" aria-label="Estimated total investment">
+      <span class="kit-total-label">Estimated total investment</span>
+      <div>
+        <span class="kit-total-amount"></span>
+        <span class="kit-total-alt" hidden></span>
       </div>
-
-      <!-- Lens -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Lens</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Tamron+28-75mm+f2.8+G2&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Tamron 28-75mm f/2.8 G2</a></div>
-              <div class="tier-option-price">$800–$1,000</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B09JVBB36L?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sigma 18-50mm f/2.8 DC DN Contemporary</a></div>
-              <div class="tier-option-price">$500–$600</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Sony+24-70mm+f2.8+GM+II&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony 24-70mm f/2.8 GM II</a></div>
-              <div class="tier-option-price">$2,100–$2,400</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Microphone -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Microphone</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=DJI+Mic+Mini&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">DJI Mic Mini</a></div>
-              <div class="tier-option-price">$150–$180</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B0CFZX734J?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">DJI Mic 2</a></div>
-              <div class="tier-option-price">$300–$350</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=RODE+Wireless+PRO&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">RODE Wireless PRO</a></div>
-              <div class="tier-option-price">$350–$450</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Teleprompter -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Teleprompter</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Desview+T3&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Desview T3</a></div>
-              <div class="tier-option-price">$80–$130</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B0BC968J1M?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">NEEWER X14</a></div>
-              <div class="tier-option-price">$180–$250</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B0CH3P9K1X?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Elgato Prompter</a></div>
-              <div class="tier-option-price">$280–$320</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tripod -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Tripod (fluid head)</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=SmallRig+AD-01+Kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">SmallRig AD-01 Kit</a></div>
-              <div class="tier-option-price">$150–$250</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B07HQWGQTF?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Manfrotto Befree Live</a></div>
-              <div class="tier-option-price">$250–$450</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Benro+Aero+Series+Kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Benro Aero Series Kit</a></div>
-              <div class="tier-option-price">$500–$900</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Lighting -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Lighting</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Amaran+100d+S&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Amaran 100d S</a></div>
-              <div class="tier-option-price">$200–$300</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B08RNW1HL6?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Amaran 200d S</a></div>
-              <div class="tier-option-price">$350–$500</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Aputure+300d+II&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Aputure 300d II</a></div>
-              <div class="tier-option-price">$900–$1,300</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Memory Card -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Memory Card</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=SanDisk+Extreme+Pro+V30+128GB&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">SanDisk Extreme Pro V30 128GB</a></div>
-              <div class="tier-option-price">$25–$40</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B0BXH2WY9Q?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">SanDisk Extreme Pro V60 128GB</a></div>
-              <div class="tier-option-price">$50–$90</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Sony+Tough+V60+128GB&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony Tough V60 128GB</a></div>
-              <div class="tier-option-price">$100–$180</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Batteries -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">Batteries</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=Sony+NP-FZ100+third+party+battery+kit&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Third-party kit</a></div>
-              <div class="tier-option-price">$50–$100</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B071CLKMRT?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony OEM</a> + <a href="https://www.amazon.com/dp/B0DM3DDDVM?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">dual charger</a></div>
-              <div class="tier-option-price">$150–$250</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B071CLKMRT?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">Sony OEM &times;3</a> + <a href="https://www.amazon.com/dp/B0DM3DDDVM?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">dual charger</a></div>
-              <div class="tier-option-price">$300–$450</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ND Filter -->
-      <div class="tier-cat-block">
-        <div class="tier-cat-heading">ND Filter</div>
-        <div class="tier-options">
-          <div class="tier-option">
-            <span class="tier-option-badge badge-budget">Budget</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=K%26F+Concept+Variable+ND&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">K&amp;F Concept VND</a></div>
-              <div class="tier-option-price">$40–$80</div>
-            </div>
-          </div>
-          <div class="tier-option is-better">
-            <span class="tier-option-badge badge-better">Better</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/dp/B0CTH6G3QZ?tag=knwnlocal-20" target="_blank" rel="noopener sponsored">K&amp;F Concept True Color VND + CPL (55mm)</a></div>
-              <div class="tier-option-price">$70–$90</div>
-            </div>
-          </div>
-          <div class="tier-option">
-            <span class="tier-option-badge badge-best">Best</span>
-            <div class="tier-option-body">
-              <div class="tier-option-name"><a href="https://www.amazon.com/s?k=PolarPro+Peter+McKinnon+VND&tag=knwnlocal-20" target="_blank" rel="noopener sponsored">PolarPro Peter McKinnon VND</a></div>
-              <div class="tier-option-price">$180–$300</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /tier-cards -->
+    </div>
 
   </section>
 
@@ -1496,6 +931,43 @@ a:hover { text-decoration: underline; }
     <p class="footer-affiliate">As an Amazon Associate, KNWN Local earns from qualifying purchases.</p>
   </div>
 </footer>
+
+
+<script>
+(function () {
+  function formatDollars(amount) {
+    return '$' + amount.toLocaleString('en-US');
+  }
+
+  document.querySelectorAll('[data-kit-total]').forEach(function (totalEl) {
+    var section = document.getElementById(totalEl.getAttribute('data-kit-total'));
+    if (!section) return;
+    var sum = 0;
+    var altSum = 0;
+    var hasAlt = false;
+    section.querySelectorAll('[data-price]').forEach(function (priceEl) {
+      var price = Number(priceEl.getAttribute('data-price'));
+      var alt = priceEl.hasAttribute('data-alt-price')
+        ? Number(priceEl.getAttribute('data-alt-price'))
+        : price;
+      if (priceEl.hasAttribute('data-alt-price')) hasAlt = true;
+      sum += price;
+      altSum += alt;
+    });
+    var amountEl = totalEl.querySelector('.kit-total-amount');
+    if (amountEl) amountEl.textContent = formatDollars(sum);
+    var altEl = totalEl.querySelector('.kit-total-alt');
+    if (!altEl) return;
+    if (hasAlt) {
+      altEl.hidden = false;
+      altEl.textContent = '· or ' + formatDollars(altSum) + ' with a used FX30';
+    } else {
+      altEl.hidden = true;
+      altEl.textContent = '';
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
