@@ -939,18 +939,23 @@ a:hover { text-decoration: underline; }
     return '$' + amount.toLocaleString('en-US');
   }
 
+  function dollarsIn(text) {
+    var match = String(text).replace(/,/g, '').match(/\$(\d+)/);
+    return match ? Number(match[1]) : 0;
+  }
+
   document.querySelectorAll('[data-kit-total]').forEach(function (totalEl) {
     var section = document.getElementById(totalEl.getAttribute('data-kit-total'));
     if (!section) return;
     var sum = 0;
     var altSum = 0;
     var hasAlt = false;
-    section.querySelectorAll('[data-price]').forEach(function (priceEl) {
-      var price = Number(priceEl.getAttribute('data-price'));
-      var alt = priceEl.hasAttribute('data-alt-price')
-        ? Number(priceEl.getAttribute('data-alt-price'))
-        : price;
-      if (priceEl.hasAttribute('data-alt-price')) hasAlt = true;
+    section.querySelectorAll('.kit-card-price').forEach(function (priceEl) {
+      var usedEl = priceEl.querySelector('.price-used');
+      var mainText = usedEl ? priceEl.textContent.replace(usedEl.textContent, '') : priceEl.textContent;
+      var price = dollarsIn(mainText);
+      var alt = usedEl ? dollarsIn(usedEl.textContent) : price;
+      if (usedEl) hasAlt = true;
       sum += price;
       altSum += alt;
     });
